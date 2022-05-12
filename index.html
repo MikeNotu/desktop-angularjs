@@ -8,9 +8,11 @@
         <script src="angular-route.min.js"></script>
         <script src="app.js"></script>
     </head>
-    <body ng-controller="controlador">
+    <body ng-controller="controlador as lista">
         {{2+2*6}}
         <br />
         <input type="text" ng-model="nombre" /> Hola {{nombre +" "+ apellido}} !
+
+        <li ng-repeat="producto in lista.productos">{{producto.nombre}}</li>
     </body>
 </html>
