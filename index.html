@@ -11,7 +11,12 @@
     <body ng-controller="controlador as lista">
         {{2+2*6}}
         <br />
-        <input type="text" ng-model="nombre" /> Hola {{nombre +" "+ apellido}} !
+        <!-- <input type="text" ng-model="nombre" />
+        <p>Hola {{nombre +" "+ apellido}} !</p> -->
+
+        <input type="text" ng-model="lista.nombre" />
+        <input type="text" ng-model="lista.precio" />
+        <input type="button" value="Añadir" ng-click="lista.addProducto()" />
 
         <li ng-repeat="producto in lista.productos">{{producto.nombre}}</li>
     </body>
