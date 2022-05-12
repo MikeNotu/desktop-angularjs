@@ -24,4 +24,10 @@ app.controller("controlador", function ($scope) {
     };
 
     $scope.apellido = "Rivas";
+
+    lista.addAlCaarrito = function(){
+        var n = 1;
+        var id = lista.productoSeleccionado;
+    }
+
 });

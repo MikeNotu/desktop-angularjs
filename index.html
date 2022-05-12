@@ -16,7 +16,12 @@
 
         <input type="text" ng-model="lista.nombre" />
         <input type="text" ng-model="lista.precio" />
-        <input type="button" value="Añadir" ng-click="lista.addProducto()" />
+        <input type="button" value="Añadir" ng-click="lista.addProducto()" class="add"/>
+
+        <select name="" id="" ng-model="lista.productoSeleccionado">
+            <option ng-repeat="producto in lista.productos" value="{{producto.id}}">{{producto.nombre}}</option>
+        </select>
+
 
         <li ng-repeat="producto in lista.productos">{{producto.nombre}}</li>
     </body>
