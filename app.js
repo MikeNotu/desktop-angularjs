@@ -23,5 +23,5 @@ app.controller("controlador", function ($scope) {
         }
     };
 
-    // $scope.apellido = "Rivas";
+    $scope.apellido = "Rivas";
 });
