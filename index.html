@@ -9,6 +9,13 @@
         <script src="app.js"></script>
     </head>
     <body ng-controller="controlador as lista">
+        <div id="menu">
+            <ul>
+                <li><a href="#!">Cajero</a></li>
+                <li><a href="#!productos">Productos</a></li>
+            </ul>
+        </div>
+
         {{2+2*6}}
         <br />
         <input type="text" ng-model="nombre" />
@@ -16,13 +23,25 @@
 
         <input type="text" ng-model="lista.nombre" />
         <input type="text" ng-model="lista.precio" />
-        <input type="button" value="Añadir" ng-click="lista.addProducto()" class="add"/>
+        <input
+            type="button"
+            value="Añadir"
+            ng-click="lista.addProducto()"
+            class="add"
+        />
 
         <select name="" id="" ng-model="lista.productoSeleccionado">
-            <option ng-repeat="producto in lista.productos" value="{{producto.id}}">{{producto.nombre}}</option>
+            <option
+                ng-repeat="producto in lista.productos"
+                value="{{producto.id}}"
+            >
+                {{producto.nombre}}
+            </option>
         </select>
 
-
-        <li ng-repeat="producto in lista.productos">{{producto.nombre}}</li>
+        <li
+            ng-repeat="producto in lista.productos"
+            value="{{producto.nombre}}"
+        ></li>
     </body>
 </html>
